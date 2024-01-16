@@ -77,7 +77,7 @@ Improving my css skills is a must, especially with positioning, and mastering cs
 - [CSS Tricks ](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This helped me get comfortable with using flexbox.
 
 ## Author
-
+-Product-review-site- [https://card-component-for-product.netlify.app/] 
 - Frontend Mentor - [@jboat86](https://www.frontendmentor.io/profile/jboat86)
 
 ## Acknowledgments
