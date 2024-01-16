@@ -22,13 +22,10 @@
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: calc(100vh - 0.1px);
   font-family: "Montserrat", sans-serif;
   background-color: var(--Cream);
   font-size: 14px;
-  font-weight: 500;
   padding: 2rem;
 }
 
@@ -37,9 +34,9 @@ body {
   background-color: var(--White);
   max-width: 600px;
   min-width: 400px;
-  margin-top: 2.5rem;
 }
 
+/* image design */
 .card > article:first-child {
   border-radius: 1rem 1rem 0 0;
   overflow: hidden;
@@ -49,79 +46,75 @@ img {
   max-width: 100%;
 }
 
+/* Text design */
+h1,
+h2,
+p {
+  padding: 0.5rem 1.75rem;
+}
+
 h2 {
   text-transform: uppercase;
   color: var(--Dark-grayish-blue);
-  letter-spacing: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  margin-top: 1rem;
 }
 
 p {
   color: var(--Dark-grayish-blue);
   line-height: 1.5;
   font-size: 1.325rem;
-}
-
-.text,
-.pricing {
-  padding: 1rem 2.15rem;
+  margin-bottom: 1rem;
 }
 
 h1,
-.pricing {
+.discount-price,
+.original-price .btn {
   font-family: "Fraunces", serif;
 }
 
 h1 {
   color: var(--Very-dark-blue);
   font-weight: 700;
-  font-size: 3rem;
-  margin: 1.15rem 0 0;
+  font-size: 2.5rem;
 }
 
-article > .btn {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1.5rem;
-  font-family: "Fraunces", serif;
-}
+/* pricing */
 
 .card ul {
-  background-color: red;
-
   display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
 }
 
-.card ul li {
-  text-decoration: none;
+.card ul > li {
+  margin-left: 2rem;
 }
 
 .card ul li:nth-child(1) {
-  margin-right: 2rem;
+  margin-right: 0.5rem;
   font-size: 2.5rem;
   color: var(--Dark-cyan);
-  font-family: "Fraunces", serif;
+  font-weight: 700;
 }
 
 .card ul li:nth-child(2) {
   text-decoration: line-through;
   color: var(--Dark-grayish-blue);
+  margin-top: 0.85rem;
   font-size: 1.15rem;
 }
 
-.card article:last-child {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+article > ul > li {
+  list-style: none;
 }
+
+/* button design */
 
 button {
   background-color: var(--Dark-cyan);
   color: var(--White);
-  width: 75%;
-  margin-bottom: 2rem;
+  width: 85%;
+  margin: 1.75rem 3rem 2rem 2rem;
   border-radius: 0.5rem;
   border: none;
   padding: 1.15rem 0.5rem;
@@ -148,23 +141,40 @@ button:hover {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 740px) {
   body {
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
   .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 700px;
+    max-width: 750px;
+    height: 600px;
   }
 
-  .card article:nth-child(1) article:nth-child(3) {
-    border-radius: 0;
+  .card > article:first-child {
+    border-radius: 1rem 0 0 1rem;
+    background-color: black;
+    object-fit: cover;
+    overflow: hidden;
   }
-  .card article:nth-child(1) {
-    height: 500px;
+
+  picture > img {
+    height: 600px;
   }
-  .card article:nth-child(3) {
-    display: flex;
+
+  h1,
+  h2,
+  p,
+  ul > li {
+    margin-left: 0.25rem;
+  }
+
+  button {
+    width: 85%;
+    margin-bottom: 0.5rem;
   }
 }
